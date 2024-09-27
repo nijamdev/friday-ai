@@ -1,7 +1,0 @@
-deepgram-sdk
-requests
-python-dotenv
-flask
-groq
-websockets
-SpeechRecognition
