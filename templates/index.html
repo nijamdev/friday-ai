@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friday AI Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <h1>Friday AI Assistant</h1>
+        <div class="hologram-effect"></div>
+        <div id="status" class="status">Initializing...</div>
+        <canvas id="waveform" class="waveform"></canvas>
+        <div id="conversation" class="conversation"></div>
+        <button id="startButton" class="control-button">
+            <span class="icon">🎙️</span> Start Listening
+        </button>
+        <button id="stopButton" class="control-button" style="display: none;">
+            <span class="icon">⏹️</span> Stop Listening
+        </button>
+    </div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

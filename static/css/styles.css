@@ -1,0 +1,167 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #00fff0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/static/images/ai-background.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.container {
+    background-color: rgba(0, 20, 40, 0.8);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 0 50px rgba(0, 255, 240, 0.3);
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hologram-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0, 255, 240, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(0, 255, 240, 0.5);
+    position: relative;
+    z-index: 2;
+}
+
+.status {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.waveform {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.conversation {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #00fff0;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgba(0, 20, 40, 0.5);
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.conversation p {
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.control-button {
+    background-color: #00fff0;
+    color: #000;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    border-radius: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.control-button:hover {
+    background-color: #00cccc;
+    box-shadow: 0 0 20px rgba(0, 255, 240, 0.5);
+}
+
+.icon {
+    margin-right: 0.5rem;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 255, 240, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(0, 255, 240, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(0, 255, 240, 0.5);
+    }
+}
+
+.container {
+    animation: glow 3s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.status.listening {
+    animation: pulse 1s infinite;
+    color: #00ff00;
+}
+
+.status.processing {
+    animation: pulse 0.5s infinite;
+    color: #ffff00;
+}
+
+.status.speaking {
+    animation: pulse 1.5s infinite;
+    color: #ff00ff;
+}
