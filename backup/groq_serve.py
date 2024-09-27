@@ -12,7 +12,7 @@ client = Groq(
 
 def execute(prompt):
     completion = client.chat.completions.create(
-        model="llama-3.1-70b-versatile",
+        model="llama-3.2-90b-text-preview",
         messages=[
             {
                 "role": "user",
